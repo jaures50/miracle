@@ -256,8 +256,8 @@ const ChatbotPage: React.FC = () => {
                 message.sender === "user" ? "rounded-br-none" : "rounded-bl-none"
               }`}
               style={{
-                background: message.sender === "user" ? "var(--infos)" : "var(--primary)",
-                color: "white",
+                background: message.sender === "user" ? "var(--primary)" : "var(--border-color)",
+                color: "black",
               }}
             >
               <p className="text-sm whitespace-pre-line">{message.text}</p>
