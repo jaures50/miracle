@@ -40,8 +40,6 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
       <nav className="hidden md:flex gap-8 font-medium" style={{ color: "var(--text-main)" }}>
         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
         <a href="#" className="hover:opacity-70 transition-opacity">Editor</a>
-        <a href="/generate" className="hover:opacity-70 transition-opacity">Generations</a>
-        <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallery</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
       </nav>
 
@@ -60,10 +58,9 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
           className="absolute top-16 left-0 w-full flex flex-col gap-4 p-6 md:hidden border-b z-50"
           style={{ background: "var(--bg-navbar)", borderColor: "var(--border-color)" }}
         >
-          <a href="#" className="hover:opacity-70 transition-opacity">Home</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Editor</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Gallery</a>
-          <a href="#" className="hover:opacity-70 transition-opacity">Chatbot</a>
+         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
+        <a href="#" className="hover:opacity-70 transition-opacity">Editor</a>
+        <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
         </div>
       )}
     </header>

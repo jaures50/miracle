@@ -238,12 +238,7 @@ const features = [
     description: "Modifiez vos créations avec notre éditeur canvas avancé et intuitif.",
     link: "/generate"
   },
-  {
-    emoji: "📋",
-    title: "Modèles professionnels",
-    description: "Choisissez parmi des centaines de templates prêts à l'emploi.",
-    link: "/gallery"
-  },
+ 
   {
     emoji: "🤖",
     title: "Assistant IA",
