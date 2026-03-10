@@ -33,7 +33,7 @@ export const generateImage = async (prompt: string): Promise<string> => {
 };
 
 // Version avec seed pour avoir la même image à chaque fois
-export const generateImageWithSeed = async (prompt: string, seed: number): Promise<string> => {
+export const generateImageWithSeed = async ( seed: number): Promise<string> => {
   console.log("🎨 [SIMULATION] Génération avec seed:", seed);
   await new Promise(resolve => setTimeout(resolve, 2000));
   
@@ -43,7 +43,7 @@ export const generateImageWithSeed = async (prompt: string, seed: number): Promi
 };
 
 // Version rapide (sans délai)
-export const generateImageFast = (prompt: string): string => {
+export const generateImageFast = (): string => {
   const randomIndex = Math.floor(Math.random() * DEMO_IMAGES.length);
   return DEMO_IMAGES[randomIndex];
 };
