@@ -39,7 +39,6 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
       {/* menu desktop */}
       <nav className="hidden md:flex gap-8 font-medium" style={{ color: "var(--text-main)" }}>
         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
-        <a href="#" className="hover:opacity-70 transition-opacity">Editor</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
       </nav>
 
@@ -59,7 +58,6 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
           style={{ background: "var(--bg-navbar)", borderColor: "var(--border-color)" }}
         >
          <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
-        <a href="#" className="hover:opacity-70 transition-opacity">Editor</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
         </div>
       )}

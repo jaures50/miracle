@@ -204,7 +204,7 @@ export default function HomePage() {
           </div>
 
           {/* Testimonials rapides */}
-          <div className="grid grid-cols-3 gap-4 mt-12 text-white">
+          {/* <div className="grid grid-cols-3 gap-4 mt-12 text-white">
             <div className="text-center">
               <div className="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
               <p className="text-sm opacity-90">"Incroyable!"</p>
@@ -217,7 +217,7 @@ export default function HomePage() {
               <div className="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
               <p className="text-sm opacity-90">"Je recommande"</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
