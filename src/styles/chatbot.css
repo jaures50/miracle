@@ -1,0 +1,14 @@
+.chatbot-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.chatbot-page input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.chatbot-page button {
+  padding: 10px 20px;
+}
