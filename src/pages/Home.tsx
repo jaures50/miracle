@@ -232,12 +232,12 @@ const features = [
     description: "Créez des images époustouflantes à partir de descriptions textes simples.",
     link: "/generate"
   },
-  {
-    emoji: "✏️",
-    title: "Éditeur de design",
-    description: "Modifiez vos créations avec notre éditeur canvas avancé et intuitif.",
-    link: "/generate"
-  },
+//   {
+//     emoji: "✏️",
+//     title: "Éditeur de design",
+//     description: "Modifiez vos créations avec notre éditeur canvas avancé et intuitif.",
+//     link: "/generate"
+//   },
  
   {
     emoji: "🤖",
@@ -251,17 +251,17 @@ const features = [
     description: "Accédez à des millions d'images libres de droits.",
     link: "/gallery"
   },
-  {
-    emoji: "⚡",
-    title: "Export rapide",
-    description: "Exportez en haute résolution en un clic.",
-    link: "/generate"
-  }
+//   {
+//     emoji: "⚡",
+//     title: "Export rapide",
+//     description: "Exportez en haute résolution en un clic.",
+//     link: "/generate"
+//   }
 ]
 
 const showcaseItems = [
   "Génération automatique de designs",
   "Suggestions intelligentes en temps réel",
-  "Personnalisation avancée",
-  "Export dans tous les formats"
+//   "Personnalisation avancée",
+//   "Export dans tous les formats"
 ]
