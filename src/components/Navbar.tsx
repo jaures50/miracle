@@ -37,7 +37,7 @@ export default function Navbar({  }: NavbarProps) {
       </div>
 
       {/* menu desktop */}
-      <nav className="hidden md:flex gap-8 font-medium" style={{ color: "var(--text-main)" }}>
+      <nav className="hidden md:flex gap-9 font-medium" style={{ color: "var(--text-main)" }}>
         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
         <a href="/edd" className="hover:opacity-70 transition-opacity">Creer votre design</a>
         <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallerie</a>

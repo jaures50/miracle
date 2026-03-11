@@ -19,93 +19,243 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Créez des Designs
-              <span className="block text-yellow-300">Exceptionnels avec l'IA</span>
+              <span className="block text-yellow-300">Professionnels en un Clin d'Œil</span>
             </h1>
             
             <p className="text-xl text-white/90 mb-8 max-w-2xl">
-              AI Design Platform vous aide à créer des graphismes professionnels,
-              des posts pour réseaux sociaux et des visuels marketing facilement
-              grâce à l'intelligence artificielle.
+              Trouvez l'inspiration instantanément grâce à notre assistant intelligent. 
+              Créez des affiches, flyers, publications réseaux sociaux et supports de communication 
+              pour entreprises et églises à partir de modèles existants.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/generate"
+                to="/chatbot"
                 className="px-8 py-4 bg-white rounded-lg font-semibold text-center transition-all hover:shadow-xl hover:scale-105"
                 style={{ color: "var(--primary)" }}
               >
-                Commencer gratuitement
+                Commencer la création
               </Link>
               
-              <button
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all"
+              <Link
+                to="/gallery"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all text-center"
               >
-                Voir la démo
-              </button>
+                Voir les modèles
+              </Link>
             </div>
 
             {/* Statistiques */}
             <div className="flex gap-8 mt-12 text-white">
               <div>
-                <div className="text-3xl font-bold">50K+</div>
-                <div className="text-sm opacity-80">Utilisateurs actifs</div>
+                <div className="text-3xl font-bold">500+</div>
+                <div className="text-sm opacity-80">Modèles disponibles</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">1M+</div>
-                <div className="text-sm opacity-80">Designs créés</div>
+                <div className="text-3xl font-bold">50+</div>
+                <div className="text-sm opacity-80">Églises partenaires</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">4.9</div>
-                <div className="text-sm opacity-80">Note moyenne</div>
+                <div className="text-3xl font-bold">4.8</div>
+                <div className="text-sm opacity-80">Satisfaction client</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Types de création Section */}
       <section className="px-6 py-20" style={{ background: "var(--bg-main)" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "var(--text-main)" }}>
-              Des fonctionnalités <span style={{ color: "var(--primary)" }}>puissantes</span>
+              Créez tous vos <span style={{ color: "var(--primary)" }}>supports de communication</span>
             </h2>
             <p className="text-lg opacity-70 max-w-2xl mx-auto">
-              Tout ce dont vous avez besoin pour créer des designs professionnels en quelques minutes
+              Des affiches publicitaires aux cartes de visite, trouvez le modèle parfait pour votre projet
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {creationTypes.map((type, index) => (
+              <Link
                 key={index}
-                className="feature-card group p-8 rounded-2xl transition-all hover:scale-105 hover:shadow-xl"
+                to="/chatbot"
+                className="group p-6 rounded-xl text-center transition-all hover:scale-105 hover:shadow-lg"
                 style={{
                   background: "var(--bg-navbar)",
                   border: "1px solid var(--border-color)"
                 }}
               >
-                <div 
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform"
-                  style={{ background: "var(--primary)", color: "white" }}
-                >
-                  {feature.emoji}
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">
+                  {type.emoji}
                 </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--text-main)" }}>
-                  {feature.title}
+                <h3 className="font-semibold" style={{ color: "var(--text-main)" }}>
+                  {type.title}
                 </h3>
-                <p className="opacity-70" style={{ color: "var(--text-main)" }}>
-                  {feature.description}
-                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation Chatbot Section */}
+      <section className="px-6 py-20" style={{ background: "var(--bg-navbar)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6"
+                style={{ background: "var(--primary)", color: "white" }}>
+                Innovation 🤖
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "var(--text-main)" }}>
+                Un assistant intelligent pour 
+                <span style={{ color: "var(--primary)" }}> trouver l'inspiration</span>
+              </h2>
+              <p className="text-lg mb-6 opacity-70">
+                Notre chatbot analyse vos besoins et vous propose instantanément des designs adaptés.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                {chatbotExamples.map((example, index) => (
+                  <div 
+                    key={index}
+                    className="p-4 rounded-lg"
+                    style={{ background: "var(--bg-main)" }}
+                  >
+                    <p className="font-medium" style={{ color: "var(--text-main)" }}>
+                      "{example}"
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                to="/chatbot"
+                className="inline-block px-8 py-4 rounded-lg text-white font-semibold transition-all hover:shadow-xl hover:scale-105"
+                style={{ background: "var(--primary)" }}
+              >
+                Essayer l'assistant maintenant
+              </Link>
+            </div>
+
+            {/* Chatbot Mockup */}
+            <div 
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              style={{
+                background: "var(--bg-main)",
+                border: "1px solid var(--border-color)"
+              }}
+            >
+              <div className="p-6">
+                {/* Chat header */}
+                <div className="flex items-center gap-3 mb-6 pb-4" style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white"
+                    style={{ background: "var(--primary)" }}>
+                    🤖
+                  </div>
+                  <div>
+                    <h4 className="font-semibold" style={{ color: "var(--text-main)" }}>Assistant Design</h4>
+                    <p className="text-sm opacity-60">En ligne</p>
+                  </div>
+                </div>
+
+                {/* Chat messages */}
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-sm">
+                      👤
+                    </div>
+                    <div className="flex-1 p-3 rounded-lg" style={{ background: "var(--bg-navbar)" }}>
+                      <p style={{ color: "var(--text-main)" }}>Je veux créer une affiche pour une conférence d'église</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm"
+                      style={{ background: "var(--primary)" }}>
+                      🤖
+                    </div>
+                    <div className="flex-1">
+                      <div className="p-3 rounded-lg mb-2" style={{ background: "var(--primary)", color: "white" }}>
+                        <p>J'ai trouvé 12 modèles d'affiches pour conférence d'église :</p>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="aspect-square rounded bg-gray-200"></div>
+                        <div className="aspect-square rounded bg-gray-200"></div>
+                        <div className="aspect-square rounded bg-gray-200"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Forfaits Section */}
+      <section className="px-6 py-20" style={{ background: "var(--bg-main)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "var(--text-main)" }}>
+              Forfaits adaptés à <span style={{ color: "var(--primary)" }}>vos besoins</span>
+            </h2>
+            <p className="text-lg opacity-70 max-w-2xl mx-auto">
+              Choisissez l'abonnement qui correspond à votre activité
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {subscriptions.map((sub, index) => (
+              <div
+                key={index}
+                className="relative p-8 rounded-2xl transition-all hover:scale-105"
+                style={{
+                  background: "var(--bg-navbar)",
+                  border: sub.popular ? "2px solid var(--primary)" : "1px solid var(--border-color)"
+                }}
+              >
+                {sub.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-sm font-semibold text-white"
+                    style={{ background: "var(--primary)" }}>
+                    Plus populaire
+                  </div>
+                )}
                 
-                {/* Lien d'apprentissage */}
-                <Link 
-                  to={feature.link}
-                  className="inline-flex items-center gap-2 mt-4 text-sm font-semibold group-hover:gap-3 transition-all"
-                  style={{ color: "var(--primary)" }}
+                <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--text-main)" }}>
+                  {sub.name}
+                </h3>
+                <p className="text-sm opacity-60 mb-4">{sub.for}</p>
+                
+                <div className="mb-6">
+                  <span className="text-4xl font-bold" style={{ color: "var(--primary)" }}>
+                    {sub.price}
+                  </span>
+                  <span className="opacity-60">/mois</span>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {sub.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-sm" style={{ color: "var(--text-main)" }}>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/subscription"
+                  className="block w-full py-3 text-center rounded-lg font-semibold transition-all hover:shadow-lg"
+                  style={{
+                    background: sub.popular ? "var(--primary)" : "transparent",
+                    color: sub.popular ? "white" : "var(--primary)",
+                    border: sub.popular ? "none" : "2px solid var(--primary)"
+                  }}
                 >
-                  En savoir plus 
-                  <span>→</span>
+                  Choisir ce forfait
                 </Link>
               </div>
             ))}
@@ -113,59 +263,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Showcase Section */}
+      {/* Apports Section */}
       <section className="px-6 py-20" style={{ background: "var(--bg-navbar)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "var(--text-main)" }}>
-                Créez en quelques <span style={{ color: "var(--primary)" }}>secondes</span>
-              </h2>
-              <p className="text-lg mb-8 opacity-70">
-                Notre IA génère des designs uniques basés sur vos descriptions. 
-                Plus besoin d'être un expert en design pour créer des visuels professionnels.
-              </p>
-              
-              <div className="space-y-4">
-                {showcaseItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <div 
-                      className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                      style={{ background: "var(--primary)" }}
-                    >
-                      ✓
-                    </div>
-                    <p style={{ color: "var(--text-main)" }}>{item}</p>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Pour les entreprises */}
+            <div className="p-8 rounded-2xl" style={{ background: "var(--bg-main)" }}>
+              <div className="text-4xl mb-4">🏢</div>
+              <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--text-main)" }}>
+                Pour les entreprises
+              </h3>
+              <ul className="space-y-3">
+                {businessBenefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <span className="text-green-500">✓</span>
+                    <span style={{ color: "var(--text-main)" }}>{benefit}</span>
+                  </li>
                 ))}
-              </div>
-
-              <Link
-                to="/generate"
-                className="inline-block mt-8 px-8 py-4 rounded-lg text-white font-semibold transition-all hover:shadow-xl hover:scale-105"
-                style={{ background: "var(--primary)" }}
-              >
-                Essayez maintenant
-              </Link>
+              </ul>
             </div>
 
-            {/* Mockup/Image Placeholder */}
-            <div 
-              className="relative rounded-2xl overflow-hidden aspect-video shadow-2xl"
-              style={{
-                background: "linear-gradient(135deg, var(--primary) 0%, #1e40af 100%)",
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-6xl mb-4">🎨</div>
-                  <p className="text-xl font-semibold">Aperçu de l'éditeur</p>
-                </div>
-              </div>
-              
-              {/* Éléments décoratifs */}
-              <div className="absolute top-4 left-4 w-20 h-20 bg-white/20 rounded-lg"></div>
-              <div className="absolute bottom-4 right-4 w-32 h-32 bg-white/10 rounded-full"></div>
+            {/* Pour les églises */}
+            <div className="p-8 rounded-2xl" style={{ background: "var(--bg-main)" }}>
+              <div className="text-4xl mb-4">⛪</div>
+              <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--text-main)" }}>
+                Pour les églises
+              </h3>
+              <ul className="space-y-3">
+                {churchBenefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <span className="text-green-500">✓</span>
+                    <span style={{ color: "var(--text-main)" }}>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm italic opacity-70" style={{ color: "var(--text-main)" }}>
+                Idéal pour : cultes spéciaux, conférences, séminaires, croisades et événements spirituels
+              </p>
             </div>
           </div>
         </div>
@@ -180,88 +314,102 @@ export default function HomePage() {
       >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Prêt à créer quelque chose d'extraordinaire ?
+            Prêt à révolutionner votre communication visuelle ?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Rejoignez des milliers de créateurs qui utilisent déjà AI Design
+            Rejoignez les entreprises et églises qui créent leurs designs en quelques minutes
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/generate"
+              to="/chatbot"
               className="px-8 py-4 bg-white rounded-lg font-semibold transition-all hover:shadow-xl hover:scale-105"
               style={{ color: "var(--primary)" }}
             >
-              Créer mon premier design
+              Commencer maintenant
             </Link>
             
             <Link
               to="/gallery"
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all"
             >
-              Voir la galerie
+              Explorer les modèles
             </Link>
           </div>
-
-          {/* Testimonials rapides */}
-          {/* <div className="grid grid-cols-3 gap-4 mt-12 text-white">
-            <div className="text-center">
-              <div className="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm opacity-90">"Incroyable!"</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm opacity-90">"Très intuitif"</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm opacity-90">"Je recommande"</p>
-            </div>
-          </div> */}
         </div>
       </section>
     </div>
   )
 }
 
-// Données séparées pour plus de clarté
-const features = [
-  {
-    emoji: "🎨",
-    title: "Générateur d'images IA",
-    description: "Créez des images époustouflantes à partir de descriptions textes simples.",
-    link: "/generate"
-  },
-//   {
-//     emoji: "✏️",
-//     title: "Éditeur de design",
-//     description: "Modifiez vos créations avec notre éditeur canvas avancé et intuitif.",
-//     link: "/generate"
-//   },
- 
-  {
-    emoji: "🤖",
-    title: "Assistant IA",
-    description: "Notre chatbot vous guide et suggère des améliorations.",
-    link: "/chatbot"
-  },
-  {
-    emoji: "📸",
-    title: "Banque d'images",
-    description: "Accédez à des millions d'images libres de droits.",
-    link: "/gallery"
-  },
-//   {
-//     emoji: "⚡",
-//     title: "Export rapide",
-//     description: "Exportez en haute résolution en un clic.",
-//     link: "/generate"
-//   }
+// Données
+const creationTypes = [
+  { emoji: "📢", title: "Affiches publicitaires" },
+  { emoji: "📄", title: "Flyers" },
+  { emoji: "📱", title: "Publications réseaux sociaux" },
+  { emoji: "💌", title: "Invitations" },
+  { emoji: "🎪", title: "Visuels pour événements" },
+  { emoji: "⛪", title: "Supports pour églises" },
+  { emoji: "💳", title: "Cartes de visite" },
+  { emoji: "📊", title: "Supports communication" },
 ]
 
-const showcaseItems = [
-  "Génération automatique de designs",
-  "Suggestions intelligentes en temps réel",
-//   "Personnalisation avancée",
-//   "Export dans tous les formats"
+const chatbotExamples = [
+  "Je veux créer une affiche pour une conférence d'église",
+  "Je veux un flyer pour la promotion d'une entreprise",
+  "Je veux une affiche pour un événement musical",
+  "Je veux une invitation d'anniversaire"
+]
+
+const subscriptions = [
+  {
+    name: "Standard",
+    for: "Utilisateurs simples",
+    price: "9,99 €",
+    features: [
+      "Accès aux modèles de base",
+      "Création de visuels simples",
+      "Téléchargement qualité standard"
+    ],
+    popular: false
+  },
+  {
+    name: "Premium",
+    for: "Entreprises et organisations",
+    price: "24,99 €",
+    features: [
+      "Plus de modèles professionnels",
+      "Davantage d'éléments graphiques",
+      "Téléchargement haute qualité",
+      "Plus d'options de personnalisation"
+    ],
+    popular: true
+  },
+  {
+    name: "HD Professionnel",
+    for: "Agences et graphistes",
+    price: "49,99 €",
+    features: [
+      "Accès complet à tous les designs",
+      "Visuels en haute résolution",
+      "Modèles exclusifs",
+      "Exports pour impression professionnelle"
+    ],
+    popular: false
+  }
+]
+
+const businessBenefits = [
+  "Trouver rapidement de l'inspiration graphique",
+  "Produire plus facilement vos supports visuels",
+  "Améliorer votre communication visuelle",
+  "Publier régulièrement sur les réseaux sociaux",
+  "Gagner du temps dans la création graphique"
+]
+
+const churchBenefits = [
+  "Créer rapidement les affiches de vos événements",
+  "Vous inspirer de modèles existants",
+  "Moderniser votre communication",
+  "Partager facilement vos visuels sur les réseaux sociaux"
 ]
