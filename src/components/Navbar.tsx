@@ -6,12 +6,12 @@ interface NavbarProps {
   sidebarOpen?: boolean
 }
 
-export default function Navbar({  }: NavbarProps) {
+export default function Navbar({ }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header
-      className="flex items-center justify-between px-6 h-16 border-b relative z-50"
+      className="flex items-center justify-around px-6 h-16 border-b relative z-50"
       style={{ background: "var(--bg-navbar)", borderColor: "var(--border-color)" }}
     >
       {/* Logo et bouton sidebar pour mobile */}
@@ -38,10 +38,11 @@ export default function Navbar({  }: NavbarProps) {
 
       {/* menu desktop */}
       <nav className="hidden md:flex gap-9 font-medium" style={{ color: "var(--text-main)" }}>
-        <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
-        <a href="/edd" className="hover:opacity-70 transition-opacity">Creer votre design</a>
+        <a href="/" className="hover:opacity-70 transition-opacity">Acceuil</a>
+        <a href="/propos" className="hover:opacity-70 transition-opacity">A propos</a>
         <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallerie</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
+        <a href="/contact" className="hover:opacity-70 transition-opacity">Contact</a>
       </nav>
 
       {/* mobile button */}
@@ -59,8 +60,11 @@ export default function Navbar({  }: NavbarProps) {
           className="absolute top-16 left-0 w-full flex flex-col gap-4 p-6 md:hidden border-b z-50"
           style={{ background: "var(--bg-navbar)", borderColor: "var(--border-color)" }}
         >
-         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
-        <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
+          <a href="/" className="hover:opacity-70 transition-opacity">Acceuil</a>
+          <a href="/propos" className="hover:opacity-70 transition-opacity">A propos</a>
+          <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallerie</a>
+          <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
+          <a href="/contact" className="hover:opacity-70 transition-opacity">Contact</a>
         </div>
       )}
     </header>
