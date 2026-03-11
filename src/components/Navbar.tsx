@@ -30,10 +30,10 @@ export default function Navbar({ }: NavbarProps) {
 
         {/* Logo */}
         <h1
-          className="text-xl font-bold"
+          className="text-2xl font-bold"
           style={{ color: "var(--primary)" }}
         >
-          AI Design
+         GraphiNova
         </h1>
       </div>
 
