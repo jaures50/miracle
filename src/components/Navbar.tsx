@@ -1,5 +1,6 @@
 // src/components/Navbar.tsx
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 interface NavbarProps {
   onToggleSidebar?: () => void
@@ -43,6 +44,15 @@ export default function Navbar({ }: NavbarProps) {
         <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallerie</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
         <a href="/contact" className="hover:opacity-70 transition-opacity">Contact</a>
+
+        <Link
+          to="/chatbot"
+          className="px-8 py-4 bg-white rounded-lg font-semibold transition-all hover:shadow-xl hover:scale-105"
+          style={{ color: "var(--primary)" }}
+        >
+          Commencer maintenant
+        </Link>
+
       </nav>
 
       {/* mobile button */}
