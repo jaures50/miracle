@@ -6,7 +6,7 @@ interface NavbarProps {
   sidebarOpen?: boolean
 }
 
-export default function Navbar({ onToggleSidebar, }: NavbarProps) {
+export default function Navbar({  }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (

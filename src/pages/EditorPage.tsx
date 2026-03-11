@@ -1,6 +1,3 @@
-// src/pages/EditorPage.tsx
-import React from "react";
-
 export default function Editer() {
   return (
     <div
