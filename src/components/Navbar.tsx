@@ -17,7 +17,7 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
       {/* Logo et bouton sidebar pour mobile */}
       <div className="flex items-center gap-4">
         {/* Bouton sidebar pour desktop */}
-        <button
+        {/* <button
           onClick={onToggleSidebar}
           className="hidden md:block p-2 rounded hover:bg-opacity-10 hover:bg-black"
           style={{ color: "var(--text-main)" }}
@@ -25,7 +25,7 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-        </button>
+        </button> */}
 
         {/* Logo */}
         <h1
@@ -39,6 +39,8 @@ export default function Navbar({ onToggleSidebar, }: NavbarProps) {
       {/* menu desktop */}
       <nav className="hidden md:flex gap-8 font-medium" style={{ color: "var(--text-main)" }}>
         <a href="/" className="hover:opacity-70 transition-opacity">Home</a>
+        <a href="/edd" className="hover:opacity-70 transition-opacity">Creer votre design</a>
+        <a href="/gallery" className="hover:opacity-70 transition-opacity">Gallerie</a>
         <a href="/chatbot" className="hover:opacity-70 transition-opacity">Chatbot</a>
       </nav>
 

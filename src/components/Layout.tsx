@@ -1,7 +1,6 @@
 // src/components/Layout.tsx
 import { useState } from "react"
 import Navbar from "./Navbar"
-import Sidebar from "./Sidebar"
 
 interface LayoutProps {
   children?: React.ReactNode
@@ -20,7 +19,6 @@ export default function Layout({ children }: LayoutProps) {
       
       <div className="flex relative">
         {/* Sidebar pour desktop toujours visible, pour mobile conditionnel */}
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         
         {/* Contenu principal */}
         <main 
