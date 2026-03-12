@@ -265,7 +265,7 @@ export default function Footer() {
             {["Mentions légales", "Confidentialité", "CGU"].map((link, i) => (
               <Link
                 key={i}
-                to={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                to=""
                 className="text-white/40 hover:text-white text-xs transition-colors"
               >
                 {link}
@@ -283,7 +283,7 @@ export default function Footer() {
           whileHover={{ scale: 1.05 }}
         >
           <span className="text-xs text-white/40">
-            v2.4.0 • <span className="text-[#4ECDC4]">Bêta</span>
+            v1.0.0 • <span className="text-[#4ECDC4]">Bêta</span>
           </span>
         </motion.div>
       </div>

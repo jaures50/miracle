@@ -262,7 +262,7 @@ export default function HomePage() {
                         <div className="absolute inset-0 bg-black/20" />
                         <div className="relative p-3 text-white">
                           <span className="text-2xl">{design.image}</span>
-                          <p className="text-xs font-semibold mt-1">{design.name}</p>
+                          <p className=" text-white text-xs font-semibold mt-1">{design.name}</p>
                           {hoveredTest === design.id && (
                             <motion.div
                               initial={{ opacity: 0 }}
@@ -307,60 +307,9 @@ export default function HomePage() {
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
             />
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Tests par <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4]">catégorie</span>
-            </h2>
+           
           </div>
 
-          {/* Grille mosaïque asymétrique */}
-          <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
-            {creationTypes.map((type, index) => {
-              // Tailles différentes selon l'index
-              const spans = [
-                'col-span-2 row-span-2', // Grand
-                'col-span-1 row-span-1', // Petit
-                'col-span-2 row-span-1', // Rectangle horizontal
-                'col-span-1 row-span-2', // Rectangle vertical
-              ]
-              const spanClass = spans[index % spans.length]
-              
-              return (
-                <motion.div
-                  key={index}
-                  className={`${spanClass} relative group`}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    to="/chatbot"
-                    className="absolute inset-0 bg-gradient-to-br from-[#2a2a3a] to-[#1a1a2e] rounded-2xl border border-white/10 overflow-hidden"
-                  >
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-r from-[#FF6B6B]/20 to-[#4ECDC4]/20"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                    
-                    <div className="relative h-full p-6 flex flex-col items-center justify-center text-center">
-                      <motion.span 
-                        className="text-4xl mb-3"
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                      >
-                        {type.emoji}
-                      </motion.span>
-                      <h3 className="font-semibold text-white text-sm md:text-base">
-                        {type.title}
-                      </h3>
-                      <span className="text-xs text-[#4ECDC4] mt-2">128 tests ✓</span>
-                    </div>
-                  </Link>
-                </motion.div>
-              )
-            })}
-          </div>
         </div>
       </section>
 
@@ -439,14 +388,14 @@ export default function HomePage() {
                     }`}
                   >
                     <div className="mb-6">
-                      <h3 className="text-2xl font-bold mb-2">{sub.name}</h3>
+                      <h3 className=" text-white text-2xl font-bold mb-2">{sub.name}</h3>
                       <p className={`text-sm ${isMiddle ? 'text-white/80' : 'text-white/60'}`}>
                         {sub.for}
                       </p>
                     </div>
 
                     <div className="mb-6">
-                      <span className="text-5xl font-bold">
+                      <span className="text-5xl font-bold text-white">
                         {activeTab === 0 ? sub.price : (parseFloat(sub.price) * 10).toFixed(2) + ' €'}
                       </span>
                       <span className={`${isMiddle ? 'text-white/80' : 'text-white/60'}`}>
@@ -660,7 +609,7 @@ export default function HomePage() {
                   to="/chatbot"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] text-white rounded-xl font-semibold group"
                 >
-                  <span>Participer aux tests</span>
+                  <span>Assistance IA</span>
                   <motion.span
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -923,16 +872,7 @@ export default function HomePage() {
 }
 
 // ===== Données avec couleurs vibrantes =====
-const creationTypes = [
-  { emoji: "📢", title: "Affiches publicitaires" },
-  { emoji: "📄", title: "Flyers" },
-  { emoji: "📱", title: "Publications réseaux sociaux" },
-  { emoji: "💌", title: "Invitations" },
-  { emoji: "🎪", title: "Visuels pour événements" },
-  { emoji: "⛪", title: "Supports pour églises" },
-  { emoji: "💳", title: "Cartes de visite" },
-  { emoji: "📊", title: "Supports communication" },
-]
+
 
 const chatbotExamples = [
   "Test #2341 : Création affiche conférence église - ✅ Validé",
