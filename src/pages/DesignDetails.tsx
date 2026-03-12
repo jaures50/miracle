@@ -20,12 +20,12 @@ export default function DesignDetails() {
                 style={{ color: "var(--primary)" }}
             >
                 {design.title}
-            </h1>
 
+            </h1>
             <img
                 src={design.image}
                 alt={design.title}
-                className="rounded-lg mb-6 max-w-3xl"
+                className={`w-full h-full object-cover transition-transform duration-700`}
             />
 
             <p className="max-w-2xl">
