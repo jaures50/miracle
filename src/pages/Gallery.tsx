@@ -1,5 +1,5 @@
 // src/pages/Gallery.tsx
-import React, { useState, useEffect } from "react"
+import React, { useState,  } from "react"
 import { designs } from "../data/designs"
 import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
@@ -10,7 +10,7 @@ const Gallery: React.FC = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
   const [sortBy, setSortBy] = useState<"latest" | "popular" | "rating">("latest")
   const [visibleCount, setVisibleCount] = useState(6)
-  const [selectedCategory, setSelectedCategory] = useState<string>("all")
+  const [] = useState<string>("all")
 
   // Catégories uniques pour le filtre
   const categories = ["all", ...new Set(designs.map(d => d.category))]
