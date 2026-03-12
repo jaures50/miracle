@@ -1,8 +1,7 @@
 // src/pages/HomePage.tsx
 import { Link } from "react-router-dom"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useState, useEffect } from "react"
+import { useState,  } from "react"
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll()
