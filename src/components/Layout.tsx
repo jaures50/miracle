@@ -1,6 +1,7 @@
 // src/components/Layout.tsx
 import { useState } from "react"
 import Navbar from "./Navbar"
+import Footer from "./footer"
 
 interface LayoutProps {
   children?: React.ReactNode
@@ -58,6 +59,10 @@ export default function Layout({ children }: LayoutProps) {
           onClick={() => setSidebarOpen(false)}
         />
       )}
+
+      <Footer />
+
     </div>
+    
   )
 }

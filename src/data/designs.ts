@@ -1,5 +1,6 @@
 // src/data/designs.ts
 export interface Design {
+    [x: string]: any
     id: number
     title: string
     description: string

@@ -33,7 +33,7 @@ export default function Navbar({ }: NavbarProps) {
           className="text-2xl font-bold"
           style={{ color: "var(--primary)" }}
         >
-         GraphiNova
+          GraphiNova
         </h1>
       </div>
 
@@ -43,6 +43,7 @@ export default function Navbar({ }: NavbarProps) {
         <Link to="/propos" className="hover:opacity-70 transition-opacity" > A propos </Link>
         <Link to="/gallery" className="hover:opacity-70 transition-opacity" > Gallerie </Link>
         <Link to="/chatbot" className="hover:opacity-70 transition-opacity" > Chatbot </Link>
+        <Link to="/generate" className="hover:opacity-70 transition-opacity" >Créer avec l'IA </Link>
         <Link to="/contact" className="hover:opacity-70 transition-opacity" > Contact </Link>
       </nav>
 
@@ -65,6 +66,7 @@ export default function Navbar({ }: NavbarProps) {
           <Link to="/propos" className="hover:opacity-70 transition-opacity" > A propos </Link>
           <Link to="/gallery" className="hover:opacity-70 transition-opacity" > Gallerie </Link>
           <Link to="/chatbot" className="hover:opacity-70 transition-opacity" > Chatbot </Link>
+          <Link to="/generate" className="hover:opacity-70 transition-opacity" > Créer avec l'IA </Link>
           <Link to="/contact" className="hover:opacity-70 transition-opacity" > Contact </Link>
         </div>
       )}
