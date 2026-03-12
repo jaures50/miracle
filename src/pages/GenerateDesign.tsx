@@ -9,7 +9,7 @@ const GenerateDesign: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
-  const [ setLoadingMessage] = useState("")
+  const [, setLoadingMessage] = useState("")
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [selectedStyle, setSelectedStyle] = useState("modern")
   const [selectedRatio, setSelectedRatio] = useState("1:1")
